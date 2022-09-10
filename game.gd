@@ -19,7 +19,8 @@ func _ready():
 func change_map(next_map):
 	remove_child(current_map)
 	current_map.queue_free()
-	current_map = maps[next_map].instance()	
+	current_map = maps["Map2"].instance()	
+	add_child(current_map)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
