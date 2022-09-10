@@ -1,0 +1,60 @@
+
+
+                                                         - READ ME -  
+
+
+Thank you for using the desertSprites_...part of the fantasy_ series' of assets on itch.io!
+
+
+Stuff to know - Characters and Weapon animations
+
+- Each frame is 32x32 pixels
+- Each character animation has a right facing [columns 0-3] and left facing [columns 4-7] version
+- Each animation is 4 frames EXCEPT for the RUN and ROLL animations [8 frames]
+- Each weapon has a default sprite, followed by 3 empty frames, followed by its animations
+
+- Character animations [from top to bottom]
+  - bandit_
+    - spawn [row 0], idle [row 1], run [rows 2,3], jump [idle] [row 4], jump [run] [row 5],
+      turn [row 6], hit [row 7] and death [row 8]
+  - orc_
+    - idle [row 0], run [rows 1,2], jump [idle] [row 3], jump [run] [row 4],
+      turn [row 5], hit [row 6] and death [row 7]
+  - demon_
+    - spawn [rows 0,1], idle [row 2], run [rows 3,4], jump [idle] [row 5], jump [run] [row 6],
+      turn [row 7], hit [row 8] and death [row 9]
+  - devil_
+    - spawn [rows 0,1], idle [row 2], run [rows 3,4], jump [idle] [row 5], jump [run] [row 6],
+      turn [row 7], hit [row 8] and death [row 9]
+  - dinosaur_
+    - idle [row 0], run [rows 1,2], jump [idle] [row 3], jump [run] [row 4], attack [idle] [row 5],
+      attack [run] [rows 6,7], turn [row 8], hit [row 9] and death [row 10]
+
+- Weapon animations [from top to bottom]
+  - machete_ [stone, iron, gold and diamond]
+    - idle [row 0, COLUMN 0 ONLY], swing [right] [row 1], swing [left] [row 2]
+  - hammer_ [stone, iron, gold and diamond]
+    - idle [row 0, COLUMN 0 ONLY], swing [right] [row 1], swing [left] [row 2]
+
+Stuff to know - Particle animations
+
+- Each frame is 8x8 pixels
+- Each animation is 6 frames
+
+
+
+Future updates - 
+
+- Upward-facing animations 
+- Spin animation
+- Updated death animation
+- More machete and hammer animations [magic!]
+- Satan boss sprite
+
+If you have any questions or requests you can contact me at analogstudios.inc@gmail.com
+
+
+
+
+
+                                                             
