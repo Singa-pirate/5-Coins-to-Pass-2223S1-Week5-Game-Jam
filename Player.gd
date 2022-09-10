@@ -17,8 +17,6 @@ func _physics_process(_delta):
 	
 	if is_on_floor():
 		jumps_remaining = 1
-	if is_on_wall():
-		jumps_remaining = 1
 	
 	if Input.is_action_just_pressed("ui_up") and jumps_remaining > 0:
 		velocity.y -= JUMP_SPEED
