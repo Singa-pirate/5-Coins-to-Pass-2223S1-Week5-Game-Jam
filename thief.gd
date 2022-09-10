@@ -1,36 +1,40 @@
 extends KinematicBody2D
 
-var SPEED = 70
-var is_slow_down = 0
+var SPEED = 15
+var is_slow_down = false
 var velocity = Vector2.ZERO
+var direction = 1
+var coin = preload("res://Coin.tscn")
 
+func _ready():
+	if name == "thief2":
+		SPEED = 0
 func _physics_process(delta):
-	velocity.x = SPEED
-	#velocity.y += 8
+	if get_parent().get_node("Player").coin_count == 3:
+		SPEED = 15	
+	velocity.x = SPEED * direction
+	velocity.y += 8
 	move_and_slide(velocity, Vector2.UP)
-	
-	if Input.is_action_just_pressed("ui_accept"):
-		is_slow_down = 1
-		die()
-	
-	if Input.is_action_just_pressed("ui_up"):
-		jump()
-		
+	if is_on_wall():
+		direction = - direction
 	if is_slow_down:
 		SPEED = lerp(SPEED, 0, 0.05)
 		
 	if is_on_floor():
 		velocity.y = 0
-
-func _on_Area2D_area_entered(area):
-	pass # Replace with function body.
 	
 func die():
+	is_slow_down = true
 	get_node("look").animation = "dead"
 	get_node("dead_time").start()
 
 func _on_dead_time_timeout():
+	var Coin = coin.instance()
+	Coin.position = position + Vector2(10 * direction, 0)
+	Coin.scale = Vector2(0.5, 0.5)
+	get_parent().add_child(Coin)
 	queue_free()
+	
 
 func jump():
 	velocity.y = -100

@@ -1,0 +1,95 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/Original/Tileset [Levels]/Objects/Static_Objects/Static_Objects.png" type="Texture" id=1]
+[ext_resource path="res://evil_tree.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 50, 8, 29, 45 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 5, 20 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "fall"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -90.7 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "grow"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.8, 0.8 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10.25, 18.5 )
+
+[node name="tree" type="KinematicBody2D"]
+scale = Vector2( 0.5, 0.5 )
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -22 )
+scale = Vector2( 1, 1.21111 )
+frames = SubResource( 3 )
+
+[node name="Touchbox" type="Area2D" parent="."]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Touchbox"]
+position = Vector2( -31, -21 )
+shape = SubResource( 4 )
+
+[node name="pause" type="Timer" parent="."]
+one_shot = true
+
+[node name="fall" type="AnimationPlayer" parent="."]
+anims/fall = SubResource( 6 )
+
+[node name="grow" type="AnimationPlayer" parent="."]
+anims/grow = SubResource( 5 )
+
+[node name="Killbox" type="Area2D" parent="."]
+collision_mask = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killbox"]
+position = Vector2( -5.75, -20 )
+shape = SubResource( 1 )
+
+[node name="dead" type="Timer" parent="."]
+wait_time = 4.0
+
+[connection signal="area_entered" from="Touchbox" to="." method="_on_Touchbox_area_entered"]
+[connection signal="body_entered" from="Touchbox" to="." method="_on_Touchbox_body_entered"]
+[connection signal="timeout" from="pause" to="." method="_on_pause_timeout"]
+[connection signal="body_entered" from="Killbox" to="." method="_on_Killbox_body_entered"]
+[connection signal="timeout" from="dead" to="." method="_on_dead_timeout"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/截屏2022-09-10 下午4.21.36.png-329630deef8484e016fc6ff75b756120.stex"
+path="res://.import/截屏2022-09-10 下午4.21.36.png-2529141130a53ae8474ea599ef0cf0fe.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://截屏2022-09-10 下午4.21.36.png"
-dest_files=[ "res://.import/截屏2022-09-10 下午4.21.36.png-329630deef8484e016fc6ff75b756120.stex" ]
+source_file="res://assets/Original/截屏2022-09-10 下午4.21.36.png"
+dest_files=[ "res://.import/截屏2022-09-10 下午4.21.36.png-2529141130a53ae8474ea599ef0cf0fe.stex" ]
 
 [params]
 

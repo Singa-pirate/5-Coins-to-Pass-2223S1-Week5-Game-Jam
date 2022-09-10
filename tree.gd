@@ -14,13 +14,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_Touchbox_area_entered(area):
-	#set_rotation_degrees(-90)
-	get_node("fall").play("fall")
-	get_node("pause").start()
-
-
-func _on_pause_timeout():
-	get_node("grow").play("grow")

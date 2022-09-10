@@ -20,22 +20,4 @@ shape = SubResource( 10 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sign_box"]
 shape = SubResource( 10 )
 
-[node name="Dialog_box" type="PopupDialog" parent="."]
-visible = true
-margin_left = -20.0
-margin_top = -51.0
-margin_right = 20.0
-margin_bottom = -11.0
-
-[node name="Label" type="Label" parent="Dialog_box"]
-margin_left = 5.0
-margin_top = 4.0
-margin_right = 45.0
-margin_bottom = 33.0
-grow_horizontal = 0
-grow_vertical = 0
-rect_scale = Vector2( 0.758388, 2.04907 )
-text = "1231231yuuuuuhui"
-autowrap = true
-
 [connection signal="area_entered" from="sign_box" to="." method="_on_Area2D_area_entered"]

@@ -1,9 +1,16 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=26 format=2]
 
-[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/Original/Cave_Tileset/Ruins_Temple.png" type="Texture" id=2]
-[ext_resource path="res://endpoint.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/Original/Cave_Tileset/Ruins.png" type="Texture" id=4]
+[ext_resource path="res://assets/Original/Cave_Tileset/Ruins_Temple.png" type="Texture" id=1]
+[ext_resource path="res://assets/Original/Cave_Tileset/Ruins.png" type="Texture" id=2]
+[ext_resource path="res://Thief.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://trigger2.gd" type="Script" id=5]
+[ext_resource path="res://Trigger.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Coin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://door.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Evil_tree.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Sign.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/Edited/cave.jpg" type="Texture" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
@@ -46,7 +53,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 
 [sub_resource type="TileSet" id=2]
 2/name = "Ruins.png 2"
-2/texture = ExtResource( 4 )
+2/texture = ExtResource( 2 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 55, 10, 8, 8 )
@@ -67,7 +74,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 2/z_index = 0
 3/name = "Ruins_Temple.png 3"
-3/texture = ExtResource( 2 )
+3/texture = ExtResource( 1 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 1, 1, 8, 8 )
@@ -81,7 +88,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 3/shapes = [  ]
 3/z_index = 0
 4/name = "Ruins_Temple.png 4"
-4/texture = ExtResource( 2 )
+4/texture = ExtResource( 1 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 10, 1, 8, 8 )
@@ -95,7 +102,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 4/shapes = [  ]
 4/z_index = 0
 5/name = "Ruins_Temple.png 5"
-5/texture = ExtResource( 2 )
+5/texture = ExtResource( 1 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 19, 1, 8, 8 )
@@ -109,7 +116,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 5/shapes = [  ]
 5/z_index = 0
 6/name = "Ruins_Temple.png 6"
-6/texture = ExtResource( 2 )
+6/texture = ExtResource( 1 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 28, 1, 8, 8 )
@@ -123,7 +130,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 6/shapes = [  ]
 6/z_index = 0
 7/name = "Ruins_Temple.png 7"
-7/texture = ExtResource( 2 )
+7/texture = ExtResource( 1 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 46, 1, 8, 8 )
@@ -137,7 +144,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 7/shapes = [  ]
 7/z_index = 0
 8/name = "Ruins_Temple.png 8"
-8/texture = ExtResource( 2 )
+8/texture = ExtResource( 1 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 1, 10, 8, 8 )
@@ -151,7 +158,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 8/shapes = [  ]
 8/z_index = 0
 9/name = "Ruins_Temple.png 9"
-9/texture = ExtResource( 2 )
+9/texture = ExtResource( 1 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 10, 10, 8, 8 )
@@ -165,7 +172,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 9/shapes = [  ]
 9/z_index = 0
 10/name = "Ruins_Temple.png 10"
-10/texture = ExtResource( 2 )
+10/texture = ExtResource( 1 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 19, 10, 8, 8 )
@@ -179,7 +186,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 10/shapes = [  ]
 10/z_index = 0
 11/name = "Ruins_Temple.png 11"
-11/texture = ExtResource( 2 )
+11/texture = ExtResource( 1 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 28, 10, 8, 8 )
@@ -193,7 +200,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 11/shapes = [  ]
 11/z_index = 0
 12/name = "Ruins_Temple.png 12"
-12/texture = ExtResource( 2 )
+12/texture = ExtResource( 1 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 46, 28, 8, 8 )
@@ -207,7 +214,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 12/shapes = [  ]
 12/z_index = 0
 13/name = "Ruins_Temple.png 13"
-13/texture = ExtResource( 2 )
+13/texture = ExtResource( 1 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 19, 37, 8, 8 )
@@ -221,7 +228,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 13/shapes = [  ]
 13/z_index = 0
 14/name = "Ruins_Temple.png 14"
-14/texture = ExtResource( 2 )
+14/texture = ExtResource( 1 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 10, 37, 8, 8 )
@@ -235,7 +242,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 14/shapes = [  ]
 14/z_index = 0
 15/name = "Ruins_Temple.png 15"
-15/texture = ExtResource( 2 )
+15/texture = ExtResource( 1 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 1, 37, 8, 8 )
@@ -249,7 +256,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 15/shapes = [  ]
 15/z_index = 0
 16/name = "Ruins_Temple.png 16"
-16/texture = ExtResource( 2 )
+16/texture = ExtResource( 1 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 28, 37, 8, 8 )
@@ -263,7 +270,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 16/shapes = [  ]
 16/z_index = 0
 17/name = "Ruins.png 17"
-17/texture = ExtResource( 4 )
+17/texture = ExtResource( 2 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 55, 28, 8, 8 )
@@ -284,7 +291,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 17/z_index = 0
 18/name = "Ruins.png 18"
-18/texture = ExtResource( 4 )
+18/texture = ExtResource( 2 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 91, 10, 8, 8 )
@@ -305,7 +312,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 18/z_index = 0
 19/name = "Ruins.png 19"
-19/texture = ExtResource( 4 )
+19/texture = ExtResource( 2 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 82, 10, 8, 8 )
@@ -326,7 +333,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 19/z_index = 0
 20/name = "Ruins.png 20"
-20/texture = ExtResource( 4 )
+20/texture = ExtResource( 2 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 100, 10, 8, 8 )
@@ -347,7 +354,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 20/z_index = 0
 21/name = "Ruins.png 21"
-21/texture = ExtResource( 4 )
+21/texture = ExtResource( 2 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 73, 10, 8, 8 )
@@ -368,7 +375,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 21/z_index = 0
 22/name = "Ruins.png 22"
-22/texture = ExtResource( 4 )
+22/texture = ExtResource( 2 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 73, 1, 8, 8 )
@@ -389,7 +396,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 22/z_index = 0
 23/name = "Ruins.png 23"
-23/texture = ExtResource( 4 )
+23/texture = ExtResource( 2 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 82, 1, 8, 8 )
@@ -410,7 +417,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 23/z_index = 0
 24/name = "Ruins.png 24"
-24/texture = ExtResource( 4 )
+24/texture = ExtResource( 2 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
 24/region = Rect2( 91, 1, 8, 8 )
@@ -431,7 +438,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 24/z_index = 0
 25/name = "Ruins.png 25"
-25/texture = ExtResource( 4 )
+25/texture = ExtResource( 2 )
 25/tex_offset = Vector2( 0, 0 )
 25/modulate = Color( 1, 1, 1, 1 )
 25/region = Rect2( 100, 1, 8, 8 )
@@ -452,7 +459,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 25/z_index = 0
 26/name = "Ruins.png 26"
-26/texture = ExtResource( 4 )
+26/texture = ExtResource( 2 )
 26/tex_offset = Vector2( 0, 0 )
 26/modulate = Color( 1, 1, 1, 1 )
 26/region = Rect2( 109, 1, 8, 8 )
@@ -473,7 +480,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 26/z_index = 0
 27/name = "Ruins.png 27"
-27/texture = ExtResource( 4 )
+27/texture = ExtResource( 2 )
 27/tex_offset = Vector2( 0, 0 )
 27/modulate = Color( 1, 1, 1, 1 )
 27/region = Rect2( 109, 10, 8, 8 )
@@ -494,7 +501,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 27/z_index = 0
 28/name = "Ruins.png 28"
-28/texture = ExtResource( 4 )
+28/texture = ExtResource( 2 )
 28/tex_offset = Vector2( 0, 0 )
 28/modulate = Color( 1, 1, 1, 1 )
 28/region = Rect2( 118, 10, 8, 8 )
@@ -515,19 +522,71 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 28/z_index = 0
 
-[node name="tileset_trial" type="Node2D"]
+[node name="Map2" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 216, 205 )
-scale = Vector2( 2, 2 )
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 256, 208 )
+scale = Vector2( 0.414443, 0.414443 )
+texture = ExtResource( 11 )
 
-[node name="endpoint" parent="." instance=ExtResource( 3 )]
-position = Vector2( 272, 208 )
+[node name="tree" parent="." instance=ExtResource( 9 )]
+position = Vector2( 376, 280 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 224, 160 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="sign" parent="Player" instance=ExtResource( 10 )]
+position = Vector2( 272, 228 )
+scale = Vector2( 0.52132, 0.52132 )
+
+[node name="thief" parent="." instance=ExtResource( 3 )]
+position = Vector2( 216, 192 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="coin" parent="." instance=ExtResource( 7 )]
+position = Vector2( 272, 144 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="coin3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 200, 280 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="coin4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 352, 272 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="coin5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 344, 240 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="coin2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 232, 232 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Trigger" parent="." instance=ExtResource( 6 )]
+position = Vector2( 264, 144 )
+scale = Vector2( 0.329386, -2.03208 )
+script = ExtResource( 5 )
+
+[node name="delay" type="Timer" parent="Trigger"]
+wait_time = 2.0
+one_shot = true
+
+[node name="door" parent="." instance=ExtResource( 8 )]
+position = Vector2( 400, 288 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="thief2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 288, 144 )
+scale = Vector2( 0.3, 0.3 )
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2( -488, -432 )
-scale = Vector2( 3, 3 )
+scale = Vector2( 0.75, 0.75 )
 tile_set = SubResource( 2 )
 cell_size = Vector2( 4, 4 )
 format = 1
-tile_data = PoolIntArray( 3604532, 18, 0, 3604534, 18, 0, 3604536, 18, 0, 3604538, 18, 0, 3604540, 18, 0, 3604542, 18, 0, 3604544, 18, 0, 3604546, 18, 0, 3604548, 18, 0 )
+tile_data = PoolIntArray( 2949189, 17, 0, 2949191, 17, 0, 2949192, 17, 0, 2949193, 17, 0, 2949194, 17, 0, 2949195, 17, 0, 2949196, 17, 0, 2949197, 17, 0, 2949198, 17, 0, 2949199, 17, 0, 2949200, 17, 0, 2949201, 17, 0, 2949202, 17, 0, 2949203, 17, 0, 2949204, 17, 0, 2949205, 17, 0, 2949206, 17, 0, 2949207, 17, 0, 2949208, 17, 0, 2949209, 17, 0, 2949210, 17, 0, 2949211, 17, 0, 2949212, 2, 0, 2949213, 17, 0, 2949214, 17, 0, 2949215, 17, 0, 2949216, 17, 0, 2949217, 17, 0, 2949219, 17, 0, 2949220, 17, 0, 2949221, 17, 0, 2949222, 17, 0, 2949223, 17, 0, 2949224, 17, 0, 2949225, 17, 0, 2949226, 17, 0, 2949227, 17, 0, 2949228, 17, 0, 2949229, 17, 0, 2949230, 17, 0, 2949231, 17, 0, 2949232, 17, 0, 2949233, 17, 0, 2949234, 17, 0, 2949235, 17, 0, 2949236, 17, 0, 2949237, 17, 0, 2949238, 17, 0, 2949239, 17, 0, 2949240, 17, 0, 2949241, 17, 0, 2949242, 17, 0, 2949243, 17, 0, 2949244, 17, 0, 2949245, 17, 0, 2949246, 17, 0, 2949247, 17, 0, 2949248, 17, 0, 2949249, 17, 0, 2949250, 17, 0, 2949251, 17, 0, 2949252, 17, 0, 2949253, 17, 0, 2949254, 17, 0, 2949255, 17, 0, 2949256, 17, 0, 2949257, 17, 0, 2949258, 17, 0, 2949259, 17, 0, 2949260, 2, 0, 2949261, 2, 0, 3014721, 17, 0, 3014723, 17, 0, 3014748, 2, 0, 3014797, 2, 0, 3080255, 17, 0, 3080284, 2, 0, 3080333, 2, 0, 3145790, 2, 0, 3145820, 2, 0, 3145869, 2, 0, 3211326, 2, 0, 3211356, 2, 0, 3211405, 2, 0, 3276862, 2, 0, 3276892, 2, 0, 3276941, 2, 0, 3342398, 2, 0, 3342423, 2, 0, 3342424, 2, 0, 3342425, 2, 0, 3342426, 2, 0, 3342427, 2, 0, 3342428, 2, 0, 3342429, 2, 0, 3342430, 2, 0, 3342431, 2, 0, 3342432, 2, 0, 3342433, 2, 0, 3342434, 2, 0, 3342435, 2, 0, 3342436, 2, 0, 3342437, 2, 0, 3342438, 2, 0, 3342439, 2, 0, 3342440, 2, 0, 3342441, 2, 0, 3342442, 2, 0, 3342443, 2, 0, 3342445, 2, 0, 3342477, 2, 0, 3407934, 2, 0, 3407981, 2, 0, 3408013, 2, 0, 3473470, 2, 0, 3473517, 2, 0, 3473518, 2, 0, 3473519, 2, 0, 3473520, 2, 0, 3473521, 2, 0, 3473522, 2, 0, 3473523, 2, 0, 3473524, 2, 0, 3473525, 2, 0, 3473526, 2, 0, 3473527, 2, 0, 3473528, 2, 0, 3473529, 2, 0, 3473530, 2, 0, 3473531, 2, 0, 3473532, 2, 0, 3473533, 2, 0, 3473534, 2, 0, 3473535, 2, 0, 3473536, 2, 0, 3473537, 2, 0, 3473538, 2, 0, 3473539, 2, 0, 3473540, 2, 0, 3473541, 2, 0, 3473542, 2, 0, 3473549, 2, 0, 3539006, 2, 0, 3539053, 2, 0, 3539085, 2, 0, 3604542, 2, 0, 3604589, 2, 0, 3604621, 2, 0, 3670078, 2, 0, 3670125, 2, 0, 3670157, 2, 0, 3735614, 2, 0, 3735615, 2, 0, 3735616, 2, 0, 3735617, 2, 0, 3735618, 2, 0, 3735619, 2, 0, 3735620, 2, 0, 3735621, 2, 0, 3735622, 2, 0, 3735623, 2, 0, 3735624, 2, 0, 3735625, 2, 0, 3735626, 2, 0, 3735627, 2, 0, 3735628, 2, 0, 3735629, 2, 0, 3735630, 2, 0, 3735631, 2, 0, 3735632, 2, 0, 3735633, 2, 0, 3735634, 2, 0, 3735635, 2, 0, 3735636, 2, 0, 3735637, 2, 0, 3735638, 2, 0, 3735639, 2, 0, 3735640, 2, 0, 3735641, 2, 0, 3735642, 2, 0, 3735643, 2, 0, 3735644, 2, 0, 3735645, 2, 0, 3735646, 2, 0, 3735647, 2, 0, 3735648, 2, 0, 3735649, 2, 0, 3735650, 2, 0, 3735651, 2, 0, 3735652, 2, 0, 3735653, 2, 0, 3735654, 2, 0, 3735655, 2, 0, 3735661, 2, 0, 3735693, 2, 0, 3801150, 2, 0, 3801197, 2, 0, 3801229, 2, 0, 3866686, 2, 0, 3866733, 2, 0, 3866765, 2, 0, 3932222, 2, 0, 3932269, 2, 0, 3932301, 2, 0, 3997758, 2, 0, 3997805, 2, 0, 3997837, 2, 0, 4063294, 2, 0, 4063319, 2, 0, 4063320, 2, 0, 4063321, 2, 0, 4063322, 2, 0, 4063323, 2, 0, 4063324, 2, 0, 4063325, 2, 0, 4063326, 2, 0, 4063327, 2, 0, 4063328, 2, 0, 4063329, 2, 0, 4063341, 2, 0, 4063373, 2, 0, 4128830, 2, 0, 4128865, 2, 0, 4128877, 2, 0, 4128909, 2, 0, 4194366, 2, 0, 4194401, 2, 0, 4194413, 2, 0, 4194445, 2, 0, 4259902, 2, 0, 4259937, 2, 0, 4259949, 2, 0, 4259981, 2, 0, 4325438, 2, 0, 4325473, 2, 0, 4325485, 2, 0, 4325517, 2, 0, 4390974, 2, 0, 4390982, 2, 0, 4390983, 2, 0, 4390984, 2, 0, 4390985, 2, 0, 4390986, 2, 0, 4390987, 2, 0, 4390988, 2, 0, 4390989, 2, 0, 4390990, 2, 0, 4390991, 2, 0, 4390992, 2, 0, 4390993, 2, 0, 4390994, 2, 0, 4390995, 2, 0, 4390996, 2, 0, 4390997, 2, 0, 4390998, 2, 0, 4390999, 2, 0, 4391000, 2, 0, 4391001, 2, 0, 4391002, 2, 0, 4391003, 2, 0, 4391004, 2, 0, 4391009, 2, 0, 4391021, 2, 0, 4391053, 2, 0, 4456518, 2, 0, 4456545, 2, 0, 4456549, 2, 0, 4456550, 2, 0, 4456551, 2, 0, 4456552, 2, 0, 4456557, 2, 0, 4456589, 2, 0, 4522046, 2, 0, 4522054, 2, 0, 4522081, 2, 0, 4522085, 2, 0, 4522088, 2, 0, 4522093, 2, 0, 4522125, 2, 0, 4587582, 17, 0, 4587590, 2, 0, 4587617, 2, 0, 4587621, 2, 0, 4587624, 2, 0, 4587629, 2, 0, 4587661, 2, 0, 4653118, 17, 0, 4653126, 2, 0, 4653153, 2, 0, 4653157, 2, 0, 4653160, 2, 0, 4653165, 2, 0, 4653197, 2, 0, 4718654, 17, 0, 4718662, 2, 0, 4718677, 2, 0, 4718678, 2, 0, 4718679, 2, 0, 4718680, 2, 0, 4718681, 2, 0, 4718682, 2, 0, 4718683, 2, 0, 4718684, 2, 0, 4718685, 2, 0, 4718686, 2, 0, 4718687, 2, 0, 4718688, 2, 0, 4718689, 2, 0, 4718690, 2, 0, 4718691, 2, 0, 4718692, 2, 0, 4718693, 2, 0, 4718696, 2, 0, 4718701, 2, 0, 4718733, 2, 0, 4784190, 17, 0, 4784198, 2, 0, 4784213, 2, 0, 4784218, 2, 0, 4784232, 2, 0, 4784237, 2, 0, 4784243, 2, 0, 4784244, 2, 0, 4784245, 2, 0, 4784246, 2, 0, 4784247, 2, 0, 4784248, 2, 0, 4784249, 2, 0, 4784250, 2, 0, 4784251, 2, 0, 4784252, 2, 0, 4784253, 2, 0, 4784254, 2, 0, 4784255, 2, 0, 4784256, 2, 0, 4784257, 2, 0, 4784258, 2, 0, 4784259, 2, 0, 4784260, 2, 0, 4784261, 2, 0, 4784262, 2, 0, 4784263, 2, 0, 4784264, 2, 0, 4784265, 2, 0, 4784266, 2, 0, 4784267, 2, 0, 4784268, 2, 0, 4784269, 2, 0, 4849726, 17, 0, 4849734, 2, 0, 4849749, 2, 0, 4849754, 2, 0, 4849768, 2, 0, 4849773, 2, 0, 4849805, 2, 0, 4915262, 17, 0, 4915263, 2, 0, 4915264, 2, 0, 4915265, 2, 0, 4915266, 2, 0, 4915267, 2, 0, 4915268, 2, 0, 4915269, 2, 0, 4915270, 2, 0, 4915271, 2, 0, 4915280, 2, 0, 4915281, 2, 0, 4915282, 2, 0, 4915283, 2, 0, 4915284, 2, 0, 4915285, 2, 0, 4915290, 2, 0, 4915304, 2, 0, 4915309, 2, 0, 4915341, 2, 0, 4980798, 17, 0, 4980840, 2, 0, 4980845, 2, 0, 4980877, 2, 0, 5046334, 17, 0, 5046355, 2, 0, 5046376, 2, 0, 5046381, 2, 0, 5046413, 2, 0, 5111870, 17, 0, 5111891, 2, 0, 5111908, 2, 0, 5111912, 2, 0, 5111917, 2, 0, 5111949, 2, 0, 5177406, 17, 0, 5177427, 2, 0, 5177439, 2, 0, 5177440, 2, 0, 5177441, 2, 0, 5177442, 2, 0, 5177443, 2, 0, 5177444, 2, 0, 5177448, 2, 0, 5177453, 2, 0, 5177485, 2, 0, 5242942, 17, 0, 5242943, 2, 0, 5242944, 2, 0, 5242945, 2, 0, 5242946, 2, 0, 5242947, 2, 0, 5242948, 2, 0, 5242949, 2, 0, 5242950, 2, 0, 5242951, 2, 0, 5242952, 2, 0, 5242953, 2, 0, 5242954, 2, 0, 5242955, 2, 0, 5242956, 2, 0, 5242957, 2, 0, 5242958, 2, 0, 5242963, 2, 0, 5242980, 2, 0, 5242984, 2, 0, 5242989, 2, 0, 5243021, 2, 0, 5308478, 17, 0, 5308484, 2, 0, 5308499, 2, 0, 5308516, 2, 0, 5308520, 2, 0, 5308525, 2, 0, 5308527, 2, 0, 5308528, 2, 0, 5308529, 2, 0, 5308530, 2, 0, 5308531, 2, 0, 5308557, 2, 0, 5374014, 17, 0, 5374020, 2, 0, 5374035, 2, 0, 5374052, 2, 0, 5374056, 2, 0, 5374061, 2, 0, 5374093, 2, 0, 5439550, 17, 0, 5439556, 2, 0, 5439571, 2, 0, 5439573, 2, 0, 5439574, 2, 0, 5439575, 2, 0, 5439576, 2, 0, 5439577, 2, 0, 5439578, 2, 0, 5439579, 2, 0, 5439588, 2, 0, 5439592, 2, 0, 5439597, 2, 0, 5439629, 2, 0, 5505086, 17, 0, 5505092, 2, 0, 5505107, 2, 0, 5505124, 2, 0, 5505128, 2, 0, 5505129, 2, 0, 5505130, 2, 0, 5505131, 2, 0, 5505133, 2, 0, 5505165, 2, 0, 5570622, 17, 0, 5570628, 2, 0, 5570643, 2, 0, 5570660, 2, 0, 5570701, 2, 0, 5636158, 17, 0, 5636164, 2, 0, 5636196, 2, 0, 5636237, 2, 0, 5701694, 17, 0, 5701700, 2, 0, 5701715, 2, 0, 5701732, 2, 0, 5701773, 2, 0, 5767230, 17, 0, 5767236, 2, 0, 5767247, 2, 0, 5767248, 2, 0, 5767249, 2, 0, 5767250, 2, 0, 5767251, 2, 0, 5767268, 2, 0, 5767309, 2, 0, 5832766, 17, 0, 5832772, 2, 0, 5832804, 2, 0, 5832845, 2, 0, 5898302, 17, 0, 5898308, 2, 0, 5898328, 2, 0, 5898329, 2, 0, 5898335, 2, 0, 5898340, 2, 0, 5898381, 2, 0, 5963838, 17, 0, 5963864, 2, 0, 5963865, 2, 0, 5963871, 2, 0, 5963876, 2, 0, 5963917, 2, 0, 6029374, 17, 0, 6029400, 2, 0, 6029401, 2, 0, 6029407, 2, 0, 6029412, 2, 0, 6029426, 2, 0, 6029427, 2, 0, 6029428, 2, 0, 6029429, 2, 0, 6029430, 2, 0, 6029431, 2, 0, 6029432, 2, 0, 6029433, 2, 0, 6029434, 2, 0, 6029435, 2, 0, 6029436, 2, 0, 6029437, 2, 0, 6029438, 2, 0, 6029453, 2, 0, 6094910, 17, 0, 6094936, 2, 0, 6094937, 2, 0, 6094943, 2, 0, 6094948, 2, 0, 6094989, 2, 0, 6160446, 17, 0, 6160457, 2, 0, 6160458, 2, 0, 6160459, 2, 0, 6160460, 2, 0, 6160461, 2, 0, 6160462, 2, 0, 6160463, 2, 0, 6160464, 2, 0, 6160465, 2, 0, 6160472, 2, 0, 6160473, 2, 0, 6160479, 2, 0, 6160484, 2, 0, 6160525, 2, 0, 6225982, 17, 0, 6225993, 2, 0, 6226008, 2, 0, 6226009, 2, 0, 6226015, 2, 0, 6226020, 2, 0, 6226061, 2, 0, 6291518, 17, 0, 6291529, 2, 0, 6291544, 2, 0, 6291545, 2, 0, 6291551, 2, 0, 6291556, 2, 0, 6291597, 2, 0, 6357065, 2, 0, 6357080, 2, 0, 6357092, 2, 0, 6357133, 2, 0, 6422590, 17, 0, 6422591, 17, 0, 6422592, 17, 0, 6422593, 17, 0, 6422594, 17, 0, 6422595, 17, 0, 6422596, 17, 0, 6422597, 17, 0, 6422598, 17, 0, 6422599, 17, 0, 6422600, 17, 0, 6422601, 17, 0, 6422602, 17, 0, 6422603, 17, 0, 6422604, 17, 0, 6422605, 17, 0, 6422606, 17, 0, 6422607, 17, 0, 6422608, 17, 0, 6422609, 17, 0, 6422610, 17, 0, 6422611, 17, 0, 6422612, 17, 0, 6422613, 17, 0, 6422614, 17, 0, 6422615, 17, 0, 6422616, 17, 0, 6422617, 17, 0, 6422618, 17, 0, 6422619, 17, 0, 6422620, 17, 0, 6422621, 17, 0, 6422622, 17, 0, 6422623, 17, 0, 6422624, 17, 0, 6422625, 17, 0, 6422626, 17, 0, 6422627, 17, 0, 6422628, 17, 0, 6422629, 17, 0, 6422630, 17, 0, 6422631, 17, 0, 6422632, 17, 0, 6422633, 17, 0, 6422634, 17, 0, 6422635, 17, 0, 6422636, 17, 0, 6422637, 17, 0, 6422638, 17, 0, 6422639, 17, 0, 6422640, 17, 0, 6422641, 17, 0, 6422642, 17, 0, 6422643, 17, 0, 6422644, 17, 0, 6422645, 17, 0, 6422646, 17, 0, 6422647, 17, 0, 6422648, 17, 0, 6422649, 17, 0, 6422650, 17, 0, 6422651, 17, 0, 6422652, 17, 0, 6422653, 17, 0, 6422654, 17, 0, 6422655, 17, 0, 6422656, 17, 0, 6422657, 17, 0, 6422658, 17, 0, 6422659, 17, 0, 6422660, 17, 0, 6422661, 17, 0, 6422662, 17, 0, 6422663, 17, 0, 6422664, 17, 0, 6422665, 17, 0, 6422666, 17, 0, 6422667, 17, 0, 6422668, 17, 0, 6422669, 2, 0 )
+
+[connection signal="body_entered" from="Trigger" to="Trigger" method="_on_Trigger_body_entered"]
+[connection signal="timeout" from="Trigger/delay" to="Trigger" method="_on_delay_timeout"]
