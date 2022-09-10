@@ -1,0 +1,97 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://boar.gd" type="Script" id=1]
+[ext_resource path="res://assets/Original/forestSprites_ v1.2/boar_.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 140, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 28, 140, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 56, 140, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 84, 140, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 28, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 56, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 28, 56, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 56, 56, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 84, 56, 28, 28 )
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": false,
+"name": "dead",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 14 ), SubResource( 15 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
+"loop": true,
+"name": "run",
+"speed": 5.0
+} ]
+
+[node name="boar" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="look" type="AnimatedSprite" parent="."]
+frames = SubResource( 9 )
+animation = "run"
+playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, 4 )
+polygon = PoolVector2Array( -8, 0, 1, 0, 1, -4, 10, -4, 10, 9, -8, 9 )
+
+[node name="boar_box" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="boar_box"]
+position = Vector2( 0, 4 )
+polygon = PoolVector2Array( -8, 0, 1, 0, 1, -4, 10, -4, 10, 9, -8, 9 )
+
+[node name="dead_time" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="area_entered" from="boar_box" to="." method="_on_Area2D_area_entered"]
+[connection signal="timeout" from="dead_time" to="." method="_on_dead_time_timeout"]
