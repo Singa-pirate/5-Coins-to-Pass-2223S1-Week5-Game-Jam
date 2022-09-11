@@ -31,4 +31,5 @@ func _on_delay_timeout():
 	Boar = boar.instance()
 	Boar.scale = Vector2(0.5, 0.5)
 	Boar.position = Vector2(200, 150)
+	Boar.get_node("Boar").play()
 	get_parent().add_child(Boar)

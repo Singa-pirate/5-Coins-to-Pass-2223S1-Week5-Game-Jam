@@ -8,10 +8,13 @@ var coin = preload("res://Coin.tscn")
 
 func _ready():
 	if name == "thief2":
+		get_node("look").animation = "idle"
 		SPEED = 0
+		
 func _physics_process(delta):
 	if get_parent().get_node("Player").coin_count == 3:
-		SPEED = 15	
+		SPEED = 15
+		get_node("look").animation = "run"	
 	velocity.x = SPEED * direction
 	velocity.y += 8
 	move_and_slide(velocity, Vector2.UP)
@@ -19,7 +22,13 @@ func _physics_process(delta):
 		direction = - direction
 	if is_slow_down:
 		SPEED = lerp(SPEED, 0, 0.05)
+	
+	if direction == 1:
+		get_node("look").set_flip_h(false)
+	else:
 		
+		get_node("look").set_flip_h(true)
+	
 	if is_on_floor():
 		velocity.y = 0
 	

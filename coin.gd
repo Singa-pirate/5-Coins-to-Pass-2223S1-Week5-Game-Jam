@@ -8,6 +8,7 @@ func _physics_process(delta):
 		
 func _on_coin_box_body_entered(body):
 	if (body.name == "Player" or body.name == "thief" or body.name == "thief2") and not collected:
+		get_node("Collect").play()
 		die()
 		collected = true
 		if body.name == "Player":

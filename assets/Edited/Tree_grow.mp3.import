@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Tree_grow.mp3-89476d7e68fe29962f03c9722f374021.mp3str"
+
+[deps]
+
+source_file="res://assets/Edited/Tree_grow.mp3"
+dest_files=[ "res://.import/Tree_grow.mp3-89476d7e68fe29962f03c9722f374021.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

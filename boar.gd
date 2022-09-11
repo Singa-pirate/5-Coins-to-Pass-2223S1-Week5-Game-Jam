@@ -11,6 +11,13 @@ func _ready():
 
 func _physics_process(delta):
 	velocity.y += 8
+	if is_on_floor():
+		velocity.y = 0
+		
+	if get_parent().get_node("Player").is_dead:
+		get_node("look").animation = "idle"
+		return
+	
 	move_and_slide(velocity, Vector2.UP)
 
 	
@@ -26,9 +33,6 @@ func _physics_process(delta):
 		
 	if is_slow_down:
 		SPEED = lerp(SPEED, 0, 0.05)
-		
-	if is_on_floor():
-		velocity.y = 0
 
 func _on_boar_box_body_entered(body):
 	if body.name == "Player":

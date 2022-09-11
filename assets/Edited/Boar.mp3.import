@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Boar.mp3-2e58559087b8ce05851dae3798910895.mp3str"
+
+[deps]
+
+source_file="res://assets/Edited/Boar.mp3"
+dest_files=[ "res://.import/Boar.mp3-2e58559087b8ce05851dae3798910895.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

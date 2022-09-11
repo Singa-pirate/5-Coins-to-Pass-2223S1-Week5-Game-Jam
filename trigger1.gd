@@ -22,6 +22,7 @@ func _on_Trigger_body_entered(body):
 	if body.name == "Player" and !triggered:
 		Boar = boar.instance()
 		Boar.position = Vector2(260, 64)
+		Boar.get_node("Boar").play()
 		get_parent().add_child(Boar)
 		triggered = true
 		

@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://boar.gd" type="Script" id=1]
 [ext_resource path="res://assets/Original/forestSprites_ v1.2/boar_.png" type="Texture" id=2]
+[ext_resource path="res://assets/Edited/Boar.mp3" type="AudioStream" id=3]
 
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 2 )
@@ -92,6 +93,9 @@ shape = SubResource( 21 )
 [node name="dead_time" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="Boar" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
 
 [connection signal="body_entered" from="boar_box" to="." method="_on_boar_box_body_entered"]
 [connection signal="timeout" from="dead_time" to="." method="_on_dead_time_timeout"]

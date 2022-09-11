@@ -17,11 +17,14 @@ func _ready():
 
 func _on_pause_timeout():
 	get_node("grow").play("grow")
+	get_node("Grow").play()
 
 
 func _on_Touchbox_body_entered(body):
 	if body.name == "Player":
+		get_node("Killbox").set_collision_mask_bit(0, true)
 		get_node("fall").play("fall")
+		get_node("Fall").play()
 		get_node("pause").start()
 		get_node("dead").start()
 
